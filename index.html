@@ -79,7 +79,7 @@ $("#name").on("change", function (e) {
 
 $("#tokens").on("change", function (e) {
   tokens = parseInt(document.getElementById("tokens").value);
-  if(tokens === 'undefined'){
+  if(tokens === 'undefined' || isNan(tokens){
     tokens = 0
   }
   console.log(tokens);
