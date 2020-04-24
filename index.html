@@ -79,7 +79,9 @@ $("#name").on("change", function (e) {
 
 $("#tokens").on("change", function (e) {
   tokens = parseInt(document.getElementById("tokens").value);
-  if(tokens === 'undefined'){
+  //This isNan thing checks if thing is not a number,
+  //because if the value is not a number it outputs null
+  if(tokens === 'undefined' || Number.isNan(tokens)){
     tokens = 0
   }
   console.log(tokens);
@@ -87,7 +89,7 @@ $("#tokens").on("change", function (e) {
 
 $('#itemsInput').on('change', function (e) {
   item = document.getElementById('itemsInput').value;
-  if(item === 'undefined') {
+  if(item === 'undefined' {
      item = ''
   }
 });
